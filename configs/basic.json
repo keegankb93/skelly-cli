@@ -1,0 +1,52 @@
+{
+  "fileTree": [
+    {
+      "type": "file",
+      "name": "index.html",
+      "path": "./"
+    },
+    {
+      "type": "folder",
+      "name": "css",
+      "path": "./",
+      "children": [
+        {
+          "type": "file",
+          "name": "main.css",
+          "path": "./css/"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "js",
+      "path": "./",
+      "children": [
+        {
+          "type": "file",
+          "name": "index.js",
+          "path": "./js/"
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "assets",
+      "path": "./",
+      "children": [
+        {
+          "type": "folder",
+          "name": "images",
+          "path": "./assets/",
+          "children": [
+            {
+              "type": "file",
+              "name": "logo.png",
+              "path": "./assets/images/"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

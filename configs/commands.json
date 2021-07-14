@@ -1,0 +1,16 @@
+{
+  "commands": [
+    {
+      "path": "../configs/basic.json",
+      "name": "basic",
+      "shortName": "b",
+      "description": "Creates basic file structure for a simple static website."
+    },
+    {
+      "path": "../configs/basdf.json",
+      "name": "react",
+      "shortName": "r",
+      "description": "Creates basic file structure for a react application."
+    }
+  ]
+}
