@@ -4,7 +4,7 @@ const makeDir = async (name, dirPath) => {
   await mkdir(`${dirPath}${name}`);
 };
 
-const createFile = (name, dirPath) => {
+const createFile = async (name, dirPath) => {
   writeFile(`${dirPath}${name}`, "");
 };
 
@@ -22,8 +22,9 @@ const handleStructure = async (obj) => {
   }
 };
 
-const createSkeleton = async (fileStructureCfg) => {
-  const res = await readFile(new URL("../configs/basic.json", import.meta.url));
+export const createSkeleton = async (fileStructureCfg) => {
+  console.log(fileStructureCfg);
+  const res = await readFile(new URL(`${fileStructureCfg}`, import.meta.url));
 
   const loadCfg = await JSON.parse(res);
 
@@ -31,5 +32,3 @@ const createSkeleton = async (fileStructureCfg) => {
     handleStructure(obj);
   });
 };
-
-createSkeleton();

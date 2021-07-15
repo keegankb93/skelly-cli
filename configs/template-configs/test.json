@@ -1,0 +1,26 @@
+{
+  "fileTree": [
+    {
+      "type": "file",
+      "name": "test.txt",
+      "path": "./"
+    },
+    {
+      "type": "file",
+      "name": "testHTML.html",
+      "path": "./"
+    },
+    {
+      "type": "folder",
+      "name": "test-folder",
+      "path": "./",
+      "children": [
+        {
+          "type": "file",
+          "name": "test.txt",
+          "path": "./test-folder/"
+        }
+      ]
+    }
+  ]
+}

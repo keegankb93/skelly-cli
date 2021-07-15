@@ -1,7 +1,7 @@
 {
   "commands": [
     {
-      "path": "../configs/basic.json",
+      "path": "../configs/template-configs/basic.json",
       "name": "basic",
       "shortName": "b",
       "description": "Creates basic file structure for a simple static website."
@@ -11,6 +11,12 @@
       "name": "react",
       "shortName": "r",
       "description": "Creates basic file structure for a react application."
+    },
+    {
+      "path": "../configs/template-configs/test.json",
+      "name": "test",
+      "shortName": "ts",
+      "description": "Test for debugging."
     }
   ]
 }
