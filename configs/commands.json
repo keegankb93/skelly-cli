@@ -17,6 +17,12 @@
       "name": "test",
       "shortName": "ts",
       "description": "Test for debugging."
+    },
+    {
+      "path": "../configs/template-configs/index.json",
+      "name": "index",
+      "shortName": "i",
+      "description": "This will create a quick HTML file."
     }
   ]
 }

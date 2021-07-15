@@ -4,6 +4,7 @@ import { Command } from "commander";
 import { createSkeleton } from "./createSkeleton.mjs";
 import { newTempDir } from "./newTempDir.mjs";
 import { locate } from "../utility/locateCommandsFile.mjs";
+import { createCommand } from "./createCommand.mjs";
 
 const getCommands = await locate();
 
@@ -17,10 +18,15 @@ getCommands.commands.forEach(({ shortName, name, description, path }) => {
   configPath = { ...configPath, [name]: `${path}` };
 });
 
-skelly.option(
-  `-td, --tempdir [reset]`,
-  `Creates a new config and template directory. cd to the location you want to create the new directory before running this command.`
-);
+skelly
+  .option(
+    `-td, --tempdir [reset]`,
+    `Creates a new config and template directory. cd to the location you want to create the new directory before running this command.`
+  )
+  .option(
+    `-cc, --command <action>`,
+    `Create a command to execute a custom template. <create> <delete>`
+  );
 
 skelly.showHelpAfterError(
   "\nInclude --help for additional information on commands."
@@ -29,7 +35,6 @@ skelly.showHelpAfterError(
 skelly.parse(process.argv);
 
 const args = skelly.opts();
-console.log(args);
 
 if (Object.keys(args).length === 0) {
   throw new Error(
@@ -45,6 +50,10 @@ if (Object.keys(args).length > 1) {
 
 if (args.tempdir) {
   newTempDir();
+}
+
+if (args.command === "create") {
+  createCommand();
 }
 
 for (let key in args) {

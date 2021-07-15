@@ -1,0 +1,16 @@
+{
+  "fileTree": [
+    {
+      "type": "file",
+      "name": "index.html",
+      "templatePath": "templates/basic/index.html",
+      "path": "./"
+    },
+    {
+      "type": "file",
+      "name": "main.css",
+      "templatePath": "templates/basic/main.css",
+      "path": "./"
+    }
+  ]
+}

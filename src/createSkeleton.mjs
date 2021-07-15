@@ -1,16 +1,22 @@
 import { readFile, writeFile, appendFile, mkdir } from "fs/promises";
+import { writeTemplate } from "./writeTemplate.mjs";
 
 const makeDir = async (name, dirPath) => {
   await mkdir(`${dirPath}${name}`);
 };
 
-const createFile = async (name, dirPath) => {
-  writeFile(`${dirPath}${name}`, "");
+const createFile = async (name, dirPath, templatePath) => {
+  let template = "";
+
+  if (templatePath) {
+    template = await writeTemplate(templatePath);
+  }
+  writeFile(`${dirPath}${name}`, template);
 };
 
 const handleStructure = async (obj) => {
   if (obj.type === "file") {
-    createFile(obj.name, obj.path);
+    createFile(obj.name, obj.path, obj.templatePath);
   }
   if (obj.type === "folder") {
     await makeDir(obj.name, obj.path);

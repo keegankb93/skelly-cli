@@ -40,6 +40,5 @@ export const locate = async () => {
     process.exit(0);
   }
   getCommands = await JSON.parse(getCommands);
-  console.log(getCommands);
   return getCommands;
 };
