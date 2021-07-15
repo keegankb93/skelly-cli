@@ -7,22 +7,10 @@
       "description": "Creates basic file structure for a simple static website."
     },
     {
-      "path": "../configs/basdf.json",
-      "name": "react",
-      "shortName": "r",
-      "description": "Creates basic file structure for a react application."
-    },
-    {
       "path": "../configs/template-configs/test.json",
       "name": "test",
-      "shortName": "ts",
+      "shortName": "t",
       "description": "Test for debugging."
-    },
-    {
-      "path": "../configs/template-configs/index.json",
-      "name": "index",
-      "shortName": "i",
-      "description": "This will create a quick HTML file."
     }
   ]
 }

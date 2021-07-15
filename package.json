@@ -1,6 +1,6 @@
 {
   "name": "skelly-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create project structures using CLI commands and templates.",
   "main": "index.js",
   "scripts": {
@@ -14,7 +14,6 @@
   "dependencies": {
     "commander": "^8.0.0",
     "inquirer": "^8.1.1",
-    "node-fetch": "^2.6.1",
     "shelljs": "^0.8.4"
   }
 }
