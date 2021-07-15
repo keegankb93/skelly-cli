@@ -72,7 +72,7 @@ The following are the available key/value pairs:
 
 Here is a snippet: 
 
-**The array must be named `fileTree`
+**The array must be named** `fileTree`
 
 ```
 {
